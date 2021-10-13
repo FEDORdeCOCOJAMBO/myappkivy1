@@ -1,4 +1,3 @@
-# myappkivy1
 from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.label import Label
@@ -47,42 +46,46 @@ class MainScr(Screen):
         self.manager.transiction.direction = 'down'
         self.manager.current = '4'
 class FirstScr(Screen):
-    def __init(self,name = 'Экран 1'):
+    def __init__(self, name = 'Экран 1'):
         super().__init__(name = name)
-        btn1 = Button('Вернуться на главный')
-        Layout1 = Layout()
+        btn1 = Button(text = 'Вернуться на главный')
+        Layout1 = BoxLayout()
         Layout1.add_widget(btn1)
         btn1.on_press = self.next
+        self.add_widget(Layout1)
     def next(self):
         self.manager.transiction.direction = 'right'
         self.manager.current = 'Главный'
 class SecondScr(Screen):
-    def __init(self,name = 'Экран 2'):
+    def __init__(self,name = 'Экран 2'):
         super().__init__(name = name)
-        btn1 = Button('Вернуться на главный')
-        Layout1 = Layout()
+        btn1 = Button(text = 'Вернуться на главный')
+        Layout1 = BoxLayout()
         Layout1.add_widget(btn1)
         btn1.on_press = self.next
+        self.add_widget(Layout1)
     def next(self):
         self.manager.transiction.direction = 'down'
         self.manager.current = 'Главный'
 class ThirdScr(Screen):
-    def __init(self,name = 'Экран 3'):
+    def __init__(self, name = 'Экран 3'):
         super().__init__(name = name)
-        btn1 = Button('Вернуться на главный')
-        Layout1 = Layout()
+        btn1 = Button(text = 'Вернуться на главный')
+        Layout1 = BoxLayout()
         Layout1.add_widget(btn1)
         btn1.on_press = self.next
+        self.add_widget(Layout1)
     def next(self):
         self.manager.transiction.direction = 'left'
         self.manager.current = 'Главный'
 class FourthScr(Screen):
-    def __init(self,name = 'Экран 4'):
+    def __init__(self,name = 'Экран 4'):
         super().__init__(name = name)
-        btn1 = Button('Вернуться на главный')
-        Layout1 = Layout()
+        btn1 = Button(text = 'Вернуться на главный')
+        Layout1 = BoxLayout()
         Layout1.add_widget(btn1)
         btn1.on_press = self.next
+        self.add_widget(Layout1)
     def next(self):
         self.manager.transiction.direction = 'up'
         self.manager.current = 'Главный'
